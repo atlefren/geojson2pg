@@ -90,7 +90,7 @@ def load_geojson(file, tablename, srid):
         first = False
         counter += 1
         if counter%1000==0:
-            print counter
+            print "commit %s" %counter
             connection.commit()
     connection.commit()
 
@@ -115,7 +115,7 @@ try:
             if file.endswith('.geojson'):
                 print "load %s" % file
                 name = file.split(".")[0].lower().replace("Å", "aa").replace("å", "aa").replace("ø", "o").replace("æ", "ae")
-                #load_geojson(directory + "/" + file, name, 4326)
-                check_geojson(directory + "/" + file)
+                load_geojson(root  + file, name, 4326)
+    print "DONE!"
 except IndexError:
     print "specify path"

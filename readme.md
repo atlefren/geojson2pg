@@ -3,6 +3,12 @@ GeoJSON2pg
 
 A simple, quick and dirty, hackish script to load a large GeoJSON file into a Postgis db
 
+
+Usage:
+------
+
+python import.py /path/to/dir/with/geojsonfiles
+
 Features:
 --------
 - does not eat up your memory
