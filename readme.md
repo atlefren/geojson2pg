@@ -14,6 +14,7 @@ Drawbacks:
 ---------
 - hardcoded database-name
 - stores all attributes as 255 varchar
+- depends on shapely, which depends on geos
 
 Tested on
 ---------
